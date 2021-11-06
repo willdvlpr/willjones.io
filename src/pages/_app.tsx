@@ -2,7 +2,12 @@ import React from "react";
 
 import "../styles/global.css";
 
-const App = ({ Component, pageProps }) => {
+interface Props {
+  Component: any;
+  pageProps: any;
+}
+
+const App = ({ Component, pageProps }: Props) => {
   return <Component {...pageProps} />;
 };
 
