@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { device } from "../utils/device";
+// import { device } from "../utils/device";
 
 const FooterContainer = styled.footer`
   position: absolute;
@@ -42,53 +42,53 @@ const FooterContainer = styled.footer`
 //   }
 // `;
 
-const FooterLink = styled.p`
-  font-size: 24px;
-  padding-top: 40px;
-  padding-left: 50px;
-  height: auto;
-  line-height: 50%;
-  cursor: pointer;
-  &:hover {
-    transform: translateY(0.1rem);
-    opacity: 1;
-  }
+// const FooterLink = styled.p`
+//   font-size: 24px;
+//   padding-top: 40px;
+//   padding-left: 50px;
+//   height: auto;
+//   line-height: 50%;
+//   cursor: pointer;
+//   &:hover {
+//     transform: translateY(0.1rem);
+//     opacity: 1;
+//   }
 
-  &:active {
-    transform: translateY(-0.1rem);
-  }
+//   &:active {
+//     transform: translateY(-0.1rem);
+//   }
 
-  @media ${device.md} {
-    font-size: 20px;
-    padding: 12px;
-  }
+//   @media ${device.md} {
+//     font-size: 20px;
+//     padding: 12px;
+//   }
 
-  @media ${device.sm} {
-    font-size: 18px;
-  }
-`;
+//   @media ${device.sm} {
+//     font-size: 18px;
+//   }
+// `;
 
-const FooterLinkRight = styled(FooterLink)`
-  font-size: 14px;
-  padding-right: 50px;
-  width: 100%;
-  line-height: 45px;
-  text-align: right;
+// const FooterLinkRight = styled(FooterLink)`
+//   font-size: 14px;
+//   padding-right: 50px;
+//   width: 100%;
+//   line-height: 45px;
+//   text-align: right;
 
-  a {
-    text-decoration: none;
-    color: #000;
-  }
+//   a {
+//     text-decoration: none;
+//     color: #000;
+//   }
 
-  @media ${device.md} {
-    text-align: center;
-    padding: 0;
-  }
+//   @media ${device.md} {
+//     text-align: center;
+//     padding: 0;
+//   }
 
-  @media ${device.sm} {
-    font-size: 12px;
-  }
-`;
+//   @media ${device.sm} {
+//     font-size: 12px;
+//   }
+// `;
 
 const Footer = (): JSX.Element => {
   return (
