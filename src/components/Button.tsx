@@ -15,7 +15,6 @@ const ButtonContainer = styled.button`
   outline: none;
   border: none;
   border-radius: 45px;
-  color: #fff;
   cursor: pointer;
   background-color: #88dbce;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -34,6 +33,11 @@ const ButtonContainer = styled.button`
     transform: translateY(0.1rem);
   }
 
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
   @media ${device.sm} {
     height: 30px;
     width: 98px;
@@ -47,7 +51,11 @@ interface Props {
 }
 
 const Button = ({ label }: Props): JSX.Element => {
-  return <ButtonContainer>{label}</ButtonContainer>;
+  return (
+    <ButtonContainer>
+      <a href="https://www.linkedin.com/in/william-jones-3839b5133/">{label}</a>
+    </ButtonContainer>
+  );
 };
 
 export default Button;

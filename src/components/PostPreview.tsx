@@ -38,6 +38,7 @@ const Preview = styled.div`
 
   @media ${device.sm} {
     width: 280px;
+    height: 190px;
     margin-left: calc(50% - 140px);
   }
 `;
@@ -59,6 +60,7 @@ const PreviewType = styled.div`
 
   @media ${device.sm} {
     font-size: 12px;
+    padding-left: 25px;
   }
 `;
 
@@ -82,6 +84,7 @@ const PreviewTitle = styled.div`
   @media ${device.sm} {
     font-size: 14px;
     line-height: 25px;
+    padding-left: 25px;
   }
 `;
 
@@ -102,6 +105,8 @@ const PreviewDate = styled.div`
 
   @media ${device.sm} {
     font-size: 12px;
+    margin-top: 125px;
+    padding-left: 25px;
   }
 `;
 

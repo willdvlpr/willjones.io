@@ -63,6 +63,10 @@ const SocialLink = styled.p`
     transform: translateY(-0.1rem);
   }
 
+  a {
+    color: #000;
+  }
+
   @media ${device.md} {
     padding: 0 6px 0 6px;
   }
@@ -101,22 +105,34 @@ const Footer = (): JSX.Element => {
     <FooterContainer>
       <FooterLeft>
         <SocialLink>
-          <i className="fa fa-twitter"></i>
+          <a href="https://twitter.com/willdvlpr">
+            <i className="fa fa-twitter"></i>
+          </a>
         </SocialLink>
         <SocialLink>
-          <i className="fa fa-linkedin"></i>
+          <a href="https://www.linkedin.com/in/william-jones-3839b5133/">
+            <i className="fa fa-linkedin"></i>
+          </a>
         </SocialLink>
         <SocialLink>
-          <i className="fa fa-medium"></i>
+          <a href="https://willdvlpr.medium.com/">
+            <i className="fa fa-medium"></i>
+          </a>
         </SocialLink>
         <SocialLink>
-          <i className="fa fa-youtube"></i>
+          <a href="https://www.youtube.com/channel/UCSFp5DQrZemnjP5p8XYg7JA">
+            <i className="fa fa-youtube"></i>
+          </a>
         </SocialLink>
         <SocialLink>
-          <i className="fa fa-github"></i>
+          <a href="https://github.com/willdvlpr">
+            <i className="fa fa-github"></i>
+          </a>
         </SocialLink>
         <SocialLink>
-          <i className="fa fa-gitlab"></i>
+          <a href="https://gitlab.com/willjonestech">
+            <i className="fa fa-gitlab"></i>
+          </a>
         </SocialLink>
       </FooterLeft>
       <FooterRight>
