@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { device } from "../utils/device";
+import { footerSocialData, footerCopyRightData } from "../data/footerData";
 
 const FooterContainer = styled.footer`
   position: absolute;
@@ -104,42 +105,17 @@ const Footer = (): JSX.Element => {
   return (
     <FooterContainer>
       <FooterLeft>
-        <SocialLink>
-          <a href="https://twitter.com/willdvlpr">
-            <i className="fa fa-twitter"></i>
-          </a>
-        </SocialLink>
-        <SocialLink>
-          <a href="https://www.linkedin.com/in/william-jones-3839b5133/">
-            <i className="fa fa-linkedin"></i>
-          </a>
-        </SocialLink>
-        <SocialLink>
-          <a href="https://willdvlpr.medium.com/">
-            <i className="fa fa-medium"></i>
-          </a>
-        </SocialLink>
-        <SocialLink>
-          <a href="https://www.youtube.com/channel/UCSFp5DQrZemnjP5p8XYg7JA">
-            <i className="fa fa-youtube"></i>
-          </a>
-        </SocialLink>
-        <SocialLink>
-          <a href="https://github.com/willdvlpr">
-            <i className="fa fa-github"></i>
-          </a>
-        </SocialLink>
-        <SocialLink>
-          <a href="https://gitlab.com/willjonestech">
-            <i className="fa fa-gitlab"></i>
-          </a>
-        </SocialLink>
+        {footerSocialData.map((socialLink) => (
+          <SocialLink key={socialLink.id}>
+            <a href={socialLink.link}>
+              <i className={socialLink.icon}></i>
+            </a>
+          </SocialLink>
+        ))}
       </FooterLeft>
       <FooterRight>
         <CopyRight>
-          <a href="https://www.willjones.io">
-            Copyright © 2021 Will Jones. All rights reserved.
-          </a>
+          <a href={footerCopyRightData.link}>{footerCopyRightData.text}</a>
         </CopyRight>
       </FooterRight>
     </FooterContainer>

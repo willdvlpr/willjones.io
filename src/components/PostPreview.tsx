@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { device } from "../utils/device";
+import { postData } from "../data/postData";
 
 const Preview = styled.div`
   padding: 0;
@@ -113,72 +114,15 @@ const PreviewDate = styled.div`
 const PostPreview = (): JSX.Element => {
   return (
     <>
-      <Preview>
-        <a
-          href="https://willdvlpr.medium.com/create-a-scrolling-ticker-using-the-hacker-news-rss-feed-in-react-42633320a2b0"
-          target="_blank"
-        >
-          <PreviewType>Article</PreviewType>
-          <PreviewTitle>
-            Create a Scrolling Ticker using the Hacker News RSS Feed in React
-          </PreviewTitle>
-          <PreviewDate>August 5 2021</PreviewDate>
-        </a>
-      </Preview>
-      <Preview>
-        <a
-          href="https://willdvlpr.medium.com/creating-a-ci-pipeline-with-gitlab-b4bd0b68e80c"
-          target="_blank"
-        >
-          <PreviewType>Article</PreviewType>
-          <PreviewTitle>Creating a CI Pipeline with GitLab</PreviewTitle>
-          <PreviewDate>July 21 2021</PreviewDate>
-        </a>
-      </Preview>
-      <Preview>
-        <a
-          href="https://willdvlpr.medium.com/containerizing-a-react-node-js-app-using-docker-and-nginx-60b63796d67b"
-          target="_blank"
-        >
-          <PreviewType>Article</PreviewType>
-          <PreviewTitle>
-            Containerizing a React + Node.js App using Docker (and NGINX)
-          </PreviewTitle>
-          <PreviewDate>July 7 2021</PreviewDate>
-        </a>
-      </Preview>
-      <Preview>
-        <a
-          href="https://willdvlpr.medium.com/how-to-use-ibms-carbon-design-system-react-to-create-a-quick-ui-f10b8290f29"
-          target="_blank"
-        >
-          <PreviewType>Article</PreviewType>
-          <PreviewTitle>
-            How to Use IBM’s Carbon Design System (React) to Create a Quick UI
-          </PreviewTitle>
-          <PreviewDate>June 10 2021</PreviewDate>
-        </a>
-      </Preview>
-      <Preview>
-        <a
-          href="https://willdvlpr.medium.com/using-a-makefile-with-your-web-app-2e9e68bf4b53"
-          target="_blank"
-        >
-          <PreviewType>Article</PreviewType>
-          <PreviewTitle>Using a Makefile with Your Web App</PreviewTitle>
-          <PreviewDate>June 3 2021</PreviewDate>
-        </a>
-      </Preview>
-      <Preview>
-        <a
-          href="https://willdvlpr.medium.com/the-socioprophet-platform-266cea73b024"
-          target="_blank"
-        >
-          <PreviewType>Article</PreviewType>
-          <PreviewTitle>The SocioProphet Platform — Development</PreviewTitle>
-          <PreviewDate>June 2 2021</PreviewDate>
-        </a>
-      </Preview>
+      {postData.map((post) => (
+        <Preview key={post.id}>
+          <a href={post.link} target="_blank">
+            <PreviewType>{post.previewMeta.previewType}</PreviewType>
+            <PreviewTitle>{post.previewTitle}</PreviewTitle>
+            <PreviewDate>{post.previewMeta.previewDate}</PreviewDate>
+          </a>
+        </Preview>
+      ))}
     </>
   );
 };
