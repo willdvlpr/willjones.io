@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../utils/device";
 
 const Preview = styled.div`
   padding: 0;
@@ -29,6 +30,16 @@ const Preview = styled.div`
     text-decoration: none;
     color: #000;
   }
+
+  @media ${device.md} {
+    width: 450px;
+    margin-left: calc(50% - 220px);
+  }
+
+  @media ${device.sm} {
+    width: 280px;
+    margin-left: calc(50% - 140px);
+  }
 `;
 
 const PreviewType = styled.div`
@@ -41,6 +52,14 @@ const PreviewType = styled.div`
   padding-left: 40px;
   color: #fff;
   font-weight: 400;
+
+  @media ${device.md} {
+    font-size: 14px;
+  }
+
+  @media ${device.sm} {
+    font-size: 12px;
+  }
 `;
 
 const PreviewTitle = styled.div`
@@ -52,6 +71,18 @@ const PreviewTitle = styled.div`
   font-weight: bold;
   font-size: 20px;
   padding-left: 40px;
+
+  @media ${device.md} {
+    font-size: 18px;
+    line-height: 40px;
+    padding-right: 40px;
+    margin-top: 50px;
+  }
+
+  @media ${device.sm} {
+    font-size: 14px;
+    line-height: 25px;
+  }
 `;
 
 const PreviewDate = styled.div`
@@ -63,6 +94,15 @@ const PreviewDate = styled.div`
   padding-left: 40px;
   color: #fff;
   font-weight: 400;
+  font-size: 16px;
+
+  @media ${device.md} {
+    font-size: 14px;
+  }
+
+  @media ${device.sm} {
+    font-size: 12px;
+  }
 `;
 
 const PostPreview = (): JSX.Element => {

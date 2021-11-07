@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import NavBar from "../components/NavBar";
 import Display from "../components/Display";
-// import PostPreview from "../components/PostPreview";
+import PostPreview from "../components/PostPreview";
 import Footer from "../components/Footer";
 import styled from "styled-components";
 import { device } from "../utils/device";
@@ -41,7 +41,7 @@ const Home = (): JSX.Element => {
         <NavBar />
         <Heading>Software Engineer.</Heading>
         <Display />
-        {/* <PostPreview /> */}
+        <PostPreview />
         <Footer />
       </Container>
     </>
