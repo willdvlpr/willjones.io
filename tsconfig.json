@@ -97,5 +97,5 @@
   "include": [
     "src",
     "index.d.ts"
-, "utils"  ]
+, "src/utils"  ]
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../utils/device";
 
 const FooterContainer = styled.footer`
   position: absolute;
@@ -14,18 +15,27 @@ const FooterSection = styled.div`
   position: relative;
   width: 100%;
   height: 150px;
+
+  @media ${device.md} {
+    display: grid;
+  }
 `;
 
 const FooterLinks = styled.div`
   display: flex;
   float: left;
-  height: 150px;
+  height: 80px;
   width: 444px;
+  justify-content: center;
+
+  @media ${device.md} {
+    float: none;
+    width: 100%;
+  }
 `;
 
 const FooterCopyRight = styled(FooterLinks)`
   float: right;
-  font-size: 16px;
   line-height: 150px;
 `;
 
@@ -44,18 +54,36 @@ const FooterLink = styled.p`
   &:active {
     transform: translateY(-0.1rem);
   }
+
+  @media ${device.md} {
+    font-size: 20px;
+    padding: 12px;
+  }
+
+  @media ${device.sm} {
+    font-size: 18px;
+  }
 `;
 
 const FooterLinkRight = styled(FooterLink)`
   font-size: 14px;
   padding-right: 50px;
   width: 100%;
-  line-height: 60px;
+  line-height: 45px;
   text-align: right;
 
   a {
     text-decoration: none;
     color: #000;
+  }
+
+  @media ${device.md} {
+    text-align: center;
+    padding: 0;
+  }
+
+  @media ${device.sm} {
+    font-size: 12px;
   }
 `;
 
