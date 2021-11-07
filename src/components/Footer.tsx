@@ -2,14 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { device } from "../utils/device";
 
-const FooterContainer = styled.div`
+const FooterContainer = styled.footer`
   position: absolute;
   bottom: 0;
   top: 100%;
   width: 100%;
   height: 150px;
 
-  background-color: skyblue;
+  @media ${device.md} {
+    display: grid;
+  }
 `;
 
 const FooterLeft = styled.div`
@@ -17,16 +19,16 @@ const FooterLeft = styled.div`
   float: left;
   height: 150px;
   width: 50%;
-  background-color: skyblue;
+  justify-content: center;
 
   @media ${device.md} {
     float: none;
     width: 100%;
+    height: 85px;
   }
 
   @media ${device.sm} {
-    float: none;
-    width: 100%;
+    height: 60px;
   }
 `;
 
@@ -34,21 +36,24 @@ const FooterRight = styled.div`
   float: right;
   height: 150px;
   width: 50%;
-  background-color: pink;
 
   @media ${device.md} {
     float: none;
     width: 100%;
+    height: 100px;
   }
 `;
 
-const FooterLink = styled.p`
-  font-size: 24px;
-  padding-top: 40px;
-  padding-left: 50px;
-  height: auto;
-  line-height: 50%;
-  cursor: pointer;
+const SocialLink = styled.p`
+  height: 68px;
+  padding-top: 15px;
+
+  i {
+    padding: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
   &:hover {
     transform: translateY(0.1rem);
     opacity: 1;
@@ -59,21 +64,22 @@ const FooterLink = styled.p`
   }
 
   @media ${device.md} {
-    font-size: 20px;
-    padding: 12px;
+    padding: 0 6px 0 6px;
   }
 
   @media ${device.sm} {
-    font-size: 18px;
+    i {
+      padding: 0 3px 0 3px;
+      font-size: 14px;
+    }
   }
 `;
 
-const FooterLinkRight = styled(FooterLink)`
+const CopyRight = styled.p`
   font-size: 14px;
-  padding-right: 50px;
-  width: 100%;
   line-height: 45px;
-  text-align: right;
+  text-align: center;
+  padding-top: 28px;
 
   a {
     text-decoration: none;
@@ -81,8 +87,8 @@ const FooterLinkRight = styled(FooterLink)`
   }
 
   @media ${device.md} {
-    text-align: center;
-    padding: 0;
+    line-height: 0;
+    padding-top: 20px;
   }
 
   @media ${device.sm} {
@@ -94,31 +100,31 @@ const Footer = (): JSX.Element => {
   return (
     <FooterContainer>
       <FooterLeft>
-        <FooterLink>
+        <SocialLink>
           <i className="fa fa-twitter"></i>
-        </FooterLink>
-        <FooterLink>
+        </SocialLink>
+        <SocialLink>
           <i className="fa fa-linkedin"></i>
-        </FooterLink>
-        <FooterLink>
+        </SocialLink>
+        <SocialLink>
           <i className="fa fa-medium"></i>
-        </FooterLink>
-        <FooterLink>
+        </SocialLink>
+        <SocialLink>
           <i className="fa fa-youtube"></i>
-        </FooterLink>
-        <FooterLink>
+        </SocialLink>
+        <SocialLink>
           <i className="fa fa-github"></i>
-        </FooterLink>
-        <FooterLink>
+        </SocialLink>
+        <SocialLink>
           <i className="fa fa-gitlab"></i>
-        </FooterLink>
+        </SocialLink>
       </FooterLeft>
       <FooterRight>
-        <FooterLinkRight>
-          <a href="www.willjones.io">
+        <CopyRight>
+          <a href="https://www.willjones.io">
             Copyright © 2021 Will Jones. All rights reserved.
           </a>
-        </FooterLinkRight>
+        </CopyRight>
       </FooterRight>
     </FooterContainer>
   );
