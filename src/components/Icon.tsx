@@ -1,20 +1,39 @@
 import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
+import { device } from "../utils/device";
 
 const IconContainer = styled.div`
   width: 80px;
   height: 80px;
   opacity: 0.4;
   transform: scale(0.6);
-  //   margin: 0 50px 0 50px;
   transition: all 0.3s ease 0s;
+
   &:hover {
     transform: translateY(0.1rem);
   }
 
   &:active {
     transform: translateY(-0.4rem);
+  }
+
+  @media ${device.md} {
+    transform: scale(0.5);
+
+    &:hover {
+      transform: translateY(0rem);
+      opacity: 0.8;
+    }
+
+    &:active {
+      transform: translateY(0rem);
+    }
+  }
+
+  @media ${device.sm} {
+    transform: scale(0.4);
+    width: 50px;
   }
 `;
 

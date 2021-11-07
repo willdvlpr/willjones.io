@@ -1,10 +1,11 @@
 import React from "react";
 import Head from "next/head";
 import NavBar from "../components/NavBar";
-// import Display from "../components/Display";
+import Display from "../components/Display";
 // import PostPreview from "../components/PostPreview";
 import Footer from "../components/Footer";
 import styled from "styled-components";
+import { device } from "../utils/device";
 
 const Container = styled.div`
   position: absolute;
@@ -12,20 +13,23 @@ const Container = styled.div`
   height: 1800px;
 `;
 
-// const HeadingSection = styled.section`
-//   width: 600px;
-//   height: 250px;
-//   margin-left: calc(50% - 300px);
-//   padding-top: 125px;
-//   text-align: center;
-// `;
+const Heading = styled.h1`
+  text-align: center;
+  margin-top: 150px;
+  font-weight: 800;
+  font-size: 50px;
+  letter-spacing: 1.5px;
+  color: #000;
 
-// const Heading = styled.h1`
-//   font-weight: 800;
-//   font-size: 50px;
-//   letter-spacing: 1.5px;
-//   color: #000;
-// `;
+  @media ${device.md} {
+    font-size: 36px;
+  }
+
+  @media ${device.sm} {
+    margin-top: 130px;
+    font-size: 22px;
+  }
+`;
 
 const Home = (): JSX.Element => {
   return (
@@ -35,10 +39,8 @@ const Home = (): JSX.Element => {
           <title>Will Jones</title>
         </Head>
         <NavBar />
-        {/* <HeadingSection>
-          <Heading>Software Engineer.</Heading>
-        </HeadingSection> */}
-        {/* <Display /> */}
+        <Heading>Software Engineer.</Heading>
+        <Display />
         {/* <PostPreview /> */}
         <Footer />
       </Container>
