@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../utils/device";
 
 const Preview = styled.div`
   padding: 0;
@@ -64,7 +65,6 @@ const PreviewDate = styled.div`
   color: #fff;
   font-weight: 400;
 `;
-// 749 × 163
 
 const PostPreview = (): JSX.Element => {
   return (

@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   margin: auto;
+  width: 100%;
   font-family: Montserrat, sans-serif;
 }
 

@@ -8,36 +8,39 @@ const FooterContainer = styled.footer`
   top: 100%;
   width: 100%;
   height: 150px;
-  background-color: transparent;
+
+  background-color: skyblue;
 `;
 
-const FooterSection = styled.div`
-  position: relative;
-  width: 100%;
-  height: 150px;
+// const FooterLeft = styled.div`
+//   display: flex;
+//   float: left;
+//   height: 150px;
+//   width: 50%;
+//   background-color: skyblue;
 
-  @media ${device.md} {
-    display: grid;
-  }
-`;
+//   @media ${device.md} {
+//     float: none;
+//     width: 100%;
+//   }
 
-const FooterLinks = styled.div`
-  display: flex;
-  float: left;
-  height: 80px;
-  width: 444px;
-  justify-content: center;
+//   @media ${device.sm} {
+//     float: none;
+//     width: 100%;
+//   }
+// `;
 
-  @media ${device.md} {
-    float: none;
-    width: 100%;
-  }
-`;
+// const FooterRight = styled.div`
+//   float: right;
+//   height: 150px;
+//   width: 50%;
+//   background-color: pink;
 
-const FooterCopyRight = styled(FooterLinks)`
-  float: right;
-  line-height: 150px;
-`;
+//   @media ${device.md} {
+//     float: none;
+//     width: 100%;
+//   }
+// `;
 
 const FooterLink = styled.p`
   font-size: 24px;
@@ -90,35 +93,33 @@ const FooterLinkRight = styled(FooterLink)`
 const Footer = (): JSX.Element => {
   return (
     <FooterContainer>
-      <FooterSection>
-        <FooterLinks>
-          <FooterLink>
-            <i className="fa fa-twitter"></i>
-          </FooterLink>
-          <FooterLink>
-            <i className="fa fa-linkedin"></i>
-          </FooterLink>
-          <FooterLink>
-            <i className="fa fa-medium"></i>
-          </FooterLink>
-          <FooterLink>
-            <i className="fa fa-youtube"></i>
-          </FooterLink>
-          <FooterLink>
-            <i className="fa fa-github"></i>
-          </FooterLink>
-          <FooterLink>
-            <i className="fa fa-gitlab"></i>
-          </FooterLink>
-        </FooterLinks>
-        <FooterCopyRight>
-          <FooterLinkRight>
-            <a href="www.willjones.io">
-              Copyright © 2021 Will Jones. All rights reserved.
-            </a>
-          </FooterLinkRight>
-        </FooterCopyRight>
-      </FooterSection>
+      {/* <FooterLeft> */}
+      {/* <FooterLink>
+          <i className="fa fa-twitter"></i>
+        </FooterLink>
+        <FooterLink>
+          <i className="fa fa-linkedin"></i>
+        </FooterLink>
+        <FooterLink>
+          <i className="fa fa-medium"></i>
+        </FooterLink>
+        <FooterLink>
+          <i className="fa fa-youtube"></i>
+        </FooterLink>
+        <FooterLink>
+          <i className="fa fa-github"></i>
+        </FooterLink>
+        <FooterLink>
+          <i className="fa fa-gitlab"></i>
+        </FooterLink> */}
+      {/* </FooterLeft> */}
+      {/* <FooterRight> */}
+      {/* <FooterLinkRight>
+          <a href="www.willjones.io">
+            Copyright © 2021 Will Jones. All rights reserved.
+          </a>
+        </FooterLinkRight> */}
+      {/* </FooterRight> */}
     </FooterContainer>
   );
 };
