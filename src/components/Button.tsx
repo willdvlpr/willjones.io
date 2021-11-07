@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { device } from "../utils/device";
 
 const ButtonContainer = styled.button`
   position: absolute;
@@ -16,7 +17,6 @@ const ButtonContainer = styled.button`
   border-radius: 45px;
   color: #fff;
   cursor: pointer;
-  // background-color: #c8c5db;
   background-color: #88dbce;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease 0s;
@@ -32,6 +32,13 @@ const ButtonContainer = styled.button`
     background-color: #fff;
     color: #333;
     transform: translateY(0.1rem);
+  }
+
+  @media ${device.sm} {
+    height: 30px;
+    width: 98px;
+    font-size: 12px;
+    left: calc(50% - 49px);
   }
 `;
 

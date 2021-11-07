@@ -1,6 +1,6 @@
 import React from "react";
-// import Head from "next/head";
-// import NavBar from "../components/NavBar";
+import Head from "next/head";
+import NavBar from "../components/NavBar";
 // import Display from "../components/Display";
 // import PostPreview from "../components/PostPreview";
 import Footer from "../components/Footer";
@@ -31,15 +31,15 @@ const Home = (): JSX.Element => {
   return (
     <>
       <Container>
-        {/* <Head>
+        <Head>
           <title>Will Jones</title>
         </Head>
         <NavBar />
-        <HeadingSection>
+        {/* <HeadingSection>
           <Heading>Software Engineer.</Heading>
-        </HeadingSection>
-        <Display />
-        <PostPreview /> */}
+        </HeadingSection> */}
+        {/* <Display /> */}
+        {/* <PostPreview /> */}
         <Footer />
       </Container>
     </>
