@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { device } from "../utils/device";
 
 const Preview = styled.div`
   padding: 0;
