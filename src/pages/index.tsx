@@ -1,8 +1,8 @@
 import React from "react";
-import Head from "next/head";
-import NavBar from "../components/NavBar";
-import Display from "../components/Display";
-import PostPreview from "../components/PostPreview";
+// import Head from "next/head";
+// import NavBar from "../components/NavBar";
+// import Display from "../components/Display";
+// import PostPreview from "../components/PostPreview";
 import Footer from "../components/Footer";
 import styled from "styled-components";
 
@@ -12,26 +12,26 @@ const Container = styled.div`
   height: 1800px;
 `;
 
-const HeadingSection = styled.section`
-  width: 600px;
-  height: 250px;
-  margin-left: calc(50% - 300px);
-  padding-top: 125px;
-  text-align: center;
-`;
+// const HeadingSection = styled.section`
+//   width: 600px;
+//   height: 250px;
+//   margin-left: calc(50% - 300px);
+//   padding-top: 125px;
+//   text-align: center;
+// `;
 
-const Heading = styled.h1`
-  font-weight: 800;
-  font-size: 50px;
-  letter-spacing: 1.5px;
-  color: #000;
-`;
+// const Heading = styled.h1`
+//   font-weight: 800;
+//   font-size: 50px;
+//   letter-spacing: 1.5px;
+//   color: #000;
+// `;
 
 const Home = (): JSX.Element => {
   return (
     <>
       <Container>
-        <Head>
+        {/* <Head>
           <title>Will Jones</title>
         </Head>
         <NavBar />
@@ -39,7 +39,7 @@ const Home = (): JSX.Element => {
           <Heading>Software Engineer.</Heading>
         </HeadingSection>
         <Display />
-        <PostPreview />
+        <PostPreview /> */}
         <Footer />
       </Container>
     </>

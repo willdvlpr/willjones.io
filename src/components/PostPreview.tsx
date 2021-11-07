@@ -68,7 +68,7 @@ const PreviewDate = styled.div`
 const PostPreview = (): JSX.Element => {
   return (
     <>
-      <Preview>
+      {/* <Preview>
         <a
           href="https://willdvlpr.medium.com/create-a-scrolling-ticker-using-the-hacker-news-rss-feed-in-react-42633320a2b0"
           target="_blank"
@@ -133,7 +133,7 @@ const PostPreview = (): JSX.Element => {
           <PreviewTitle>The SocioProphet Platform — Development</PreviewTitle>
           <PreviewDate>June 2 2021</PreviewDate>
         </a>
-      </Preview>
+      </Preview> */}
     </>
   );
 };
