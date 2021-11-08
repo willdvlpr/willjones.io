@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { device } from "../utils/device";
-import { postData } from "../data/postData";
 
-const Preview = styled.div`
+const ItemContainer = styled.div<{ color: string }>`
   padding: 0;
   position: relative;
   height: 180px;
@@ -15,7 +14,8 @@ const Preview = styled.div`
   cursor: pointer;
   outline: none;
   opacity: 0.7;
-  background-color: #a7d9d1;
+  background-color: ${(props) =>
+    props.color === "Article" ? "#a7d9d1" : "#a7c8d9"};
   transition: all 0.3s ease 0s;
 
   &:hover {
@@ -74,6 +74,7 @@ const PreviewTitle = styled.div`
   font-weight: bold;
   font-size: 20px;
   padding-left: 40px;
+  //   padding-right: 10px;
 
   @media ${device.md} {
     font-size: 18px;
@@ -111,20 +112,22 @@ const PreviewDate = styled.div`
   }
 `;
 
-const PostPreview = (): JSX.Element => {
+interface ItemProps {
+  href: string;
+  type: string;
+  title: string;
+  date: string;
+}
+const PreviewItem = ({ href, type, title, date }: ItemProps) => {
   return (
-    <>
-      {postData.map((post) => (
-        <Preview key={post.id}>
-          <a href={post.link} target="_blank">
-            <PreviewType>{post.previewMeta.previewType}</PreviewType>
-            <PreviewTitle>{post.previewTitle}</PreviewTitle>
-            <PreviewDate>{post.previewMeta.previewDate}</PreviewDate>
-          </a>
-        </Preview>
-      ))}
-    </>
+    <ItemContainer color={type}>
+      <a href={href} target="_blank" rel="noreferrer">
+        <PreviewType>{type}</PreviewType>
+        <PreviewTitle>{title}</PreviewTitle>
+        <PreviewDate>{date}</PreviewDate>
+      </a>
+    </ItemContainer>
   );
 };
 
-export default PostPreview;
+export default PreviewItem;

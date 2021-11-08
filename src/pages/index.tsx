@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import NavBar from "../components/NavBar";
 import Display from "../components/Display";
-import PostPreview from "../components/PostPreview";
+import Preview from "../components/Preview";
 import Footer from "../components/Footer";
 import styled from "styled-components";
 import { device } from "../utils/device";
@@ -10,7 +10,7 @@ import { device } from "../utils/device";
 const Container = styled.div`
   position: absolute;
   width: 100%;
-  height: 1800px;
+  height: 2300px;
 `;
 
 const Heading = styled.h1`
@@ -41,7 +41,7 @@ const Home = (): JSX.Element => {
         <NavBar />
         <Heading>Software Engineer.</Heading>
         <Display />
-        <PostPreview />
+        <Preview />
         <Footer />
       </Container>
     </>

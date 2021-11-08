@@ -6,6 +6,15 @@ export const postData: {
 }[] = [
   {
     id: 1,
+    link: "https://github.com/willdvlpr/react-webpack-starter",
+    previewMeta: {
+      previewType: "Open Source Code",
+      previewDate: "Last Commit, Nov 9 2021",
+    },
+    previewTitle: "react-webpack-starter",
+  },
+  {
+    id: 2,
     link: "https://willdvlpr.medium.com/create-a-scrolling-ticker-using-the-hacker-news-rss-feed-in-react-42633320a2b0",
     previewMeta: {
       previewType: "Article",
@@ -15,7 +24,7 @@ export const postData: {
       "Create a Scrolling Ticker using the Hacker News RSS Feed in React",
   },
   {
-    id: 2,
+    id: 3,
     link: "https://willdvlpr.medium.com/creating-a-ci-pipeline-with-gitlab-b4bd0b68e80c",
     previewMeta: {
       previewType: "Article",
@@ -24,7 +33,7 @@ export const postData: {
     previewTitle: "Creating a CI Pipeline with GitLab",
   },
   {
-    id: 3,
+    id: 4,
     link: "https://willdvlpr.medium.com/containerizing-a-react-node-js-app-using-docker-and-nginx-60b63796d67b",
     previewMeta: {
       previewType: "Article",
@@ -34,7 +43,7 @@ export const postData: {
       "Containerizing a React + Node.js App using Docker (and NGINX)",
   },
   {
-    id: 4,
+    id: 5,
     link: "https://willdvlpr.medium.com/how-to-use-ibms-carbon-design-system-react-to-create-a-quick-ui-f10b8290f29",
     previewMeta: {
       previewType: "Article",
@@ -44,7 +53,7 @@ export const postData: {
       "How to Use IBM’s Carbon Design System (React) to Create a Quick UI",
   },
   {
-    id: 5,
+    id: 6,
     link: "https://willdvlpr.medium.com/using-a-makefile-with-your-web-app-2e9e68bf4b53",
     previewMeta: {
       previewType: "Article",
@@ -53,12 +62,21 @@ export const postData: {
     previewTitle: "Using a Makefile with Your Web App",
   },
   {
-    id: 6,
+    id: 7,
     link: "https://willdvlpr.medium.com/the-socioprophet-platform-266cea73b024",
     previewMeta: {
       previewType: "Article",
       previewDate: "June 2 2021",
     },
     previewTitle: "The SocioProphet Platform — Development",
+  },
+  {
+    id: 8,
+    link: "https://github.com/SocioProphet",
+    previewMeta: {
+      previewType: "Startup Project",
+      previewDate: "October 1 2020",
+    },
+    previewTitle: "Open Collaborative Platform - www.socioprophet.com",
   },
 ];
