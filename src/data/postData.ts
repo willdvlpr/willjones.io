@@ -11,7 +11,7 @@ export const postData: {
       previewType: "Open Source Code",
       previewDate: "Last Commit, Nov 9 2021",
     },
-    previewTitle: "react-webpack-starter",
+    previewTitle: "react-webpack-starter | supports TypeScript and SASS",
   },
   {
     id: 2,

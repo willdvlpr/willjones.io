@@ -48,7 +48,12 @@ const Icon = ({ icon, link }: IconProps): JSX.Element => {
     <>
       <IconContainer>
         <IconLink href={link} target="_blank">
-          <Image src={`/images/${icon}.svg`} height={120} width={120} />
+          <Image
+            src={`/images/${icon}.svg`}
+            height={120}
+            width={120}
+            alt="icon for social media profile"
+          />
         </IconLink>
       </IconContainer>
     </>
