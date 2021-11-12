@@ -55,7 +55,7 @@ const Title = styled.h1`
   font-size: 28px;
   font-weight: 600;
   letter-spacing: 1.5px;
-  color: #000;
+  color: #fff;
   z-index: 1;
 
   @media ${device.md} {

@@ -49,8 +49,7 @@ export const postData: {
       previewType: "Article",
       previewDate: "June 10 2021",
     },
-    previewTitle:
-      "How to Use IBM’s Carbon Design System (React) to Create a Quick UI",
+    previewTitle: "How to Use IBM’s Carbon Design System to Create a Quick UI",
   },
   {
     id: 6,

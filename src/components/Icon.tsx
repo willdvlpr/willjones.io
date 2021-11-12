@@ -6,10 +6,10 @@ import { device } from "../utils/device";
 const IconContainer = styled.div`
   width: 80px;
   height: 80px;
-  opacity: 0.4;
+  opacity: 0.7;
   transform: scale(0.6);
   transition: all 0.3s ease 0s;
-
+  filter: invert(100%);
   &:hover {
     transform: translateY(0.1rem);
   }

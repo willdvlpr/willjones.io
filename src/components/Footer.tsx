@@ -19,6 +19,7 @@ const FooterLeft = styled.div`
   float: left;
   height: 150px;
   width: 50%;
+  background-color: #070708;
   justify-content: center;
 
   @media ${device.md} {
@@ -36,6 +37,7 @@ const FooterRight = styled.div`
   float: right;
   height: 150px;
   width: 50%;
+  background-color: #070708;
 
   @media ${device.md} {
     float: none;
@@ -52,6 +54,7 @@ const SocialLink = styled.p`
     padding: 20px;
     font-size: 24px;
     cursor: pointer;
+    color: #fff;
   }
 
   &:hover {
@@ -87,7 +90,7 @@ const CopyRight = styled.p`
 
   a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
   }
 
   @media ${device.md} {

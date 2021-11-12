@@ -11,6 +11,7 @@ const Container = styled.div`
   position: absolute;
   width: 100%;
   height: 2300px;
+  background-color: #070708;
 `;
 
 const Heading = styled.h1`
@@ -19,7 +20,7 @@ const Heading = styled.h1`
   font-weight: 800;
   font-size: 50px;
   letter-spacing: 1.5px;
-  color: #000;
+  color: #fff;
 
   @media ${device.md} {
     font-size: 36px;

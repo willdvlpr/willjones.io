@@ -9,11 +9,11 @@ const ItemContainer = styled.div<{ color: string }>`
   width: 800px;
   margin-top: 50px;
   margin-left: calc(50% - 400px);
-  border-radius: 25px;
+  border-radius: 5px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   outline: none;
-  opacity: 0.7;
+  opacity: 0.9;
   background-color: ${(props) =>
     props.color === "Article" ? "#a7d9d1" : "#a7c8d9"};
   transition: all 0.3s ease 0s;
@@ -29,7 +29,7 @@ const ItemContainer = styled.div<{ color: string }>`
 
   a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
   }
 
   @media ${device.md} {
@@ -48,10 +48,9 @@ const PreviewType = styled.div`
   position: absolute;
   height: 60px;
   width: 100%;
-  text-align: left;
   line-height: 60px;
   font-size: 18px;
-  padding-left: 40px;
+  padding: 0 40px 0 40px;
   color: #fff;
   font-weight: 400;
 
@@ -73,8 +72,7 @@ const PreviewTitle = styled.div`
   line-height: 60px;
   font-weight: bold;
   font-size: 20px;
-  padding-left: 40px;
-  //   padding-right: 10px;
+  padding: 0 40px 0 40px;
 
   @media ${device.md} {
     font-size: 18px;
@@ -97,7 +95,7 @@ const PreviewDate = styled.div`
   margin-top: 120px;
   line-height: 60px;
   padding-left: 40px;
-  color: #fff;
+  color: #000;
   font-weight: 400;
   font-size: 16px;
 
