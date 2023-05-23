@@ -5,7 +5,13 @@
 // Laptop - 1024px
 // Laptop L - 1440px
 
-const breakpoints = {
+type deviceSize = {
+  small: string;
+  medium: string;
+  large: string;
+};
+
+const breakpoints: deviceSize = {
   small: "500px",
   medium: "950px",
   large: "1200px",
