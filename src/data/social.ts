@@ -28,11 +28,6 @@ export const socialData: {
     displayName: "YouTube",
     link: "https://www.youtube.com/channel/UCSFp5DQrZemnjP5p8XYg7JA",
   },
-  {
-    id: 6,
-    displayName: "Twitter",
-    link: "https://twitter.com/willdvlpr",
-  },
 ];
 
 export const footerCopyRightData: {
