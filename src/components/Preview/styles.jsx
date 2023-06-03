@@ -1,110 +1,82 @@
 import styled from "styled-components";
-import { device } from "../../utils/device";
+import { device } from "@/utils/device";
+import { theme } from "@/utils/theme";
 
-export const ItemContainer = styled.div`
-  padding: 0;
-  position: relative;
-  height: 180px;
-  width: 800px;
-  margin-top: 50px;
-  margin-left: calc(50% - 400px);
-  border-radius: 5px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+const { lg, md, sm, mobileMd } = device;
+
+export const StyledPreviewItem = styled.div`
+  display: grid;
+  align-items: center;
+  height: 120px;
+  width: 450px;
+  margin-top: 60px;
+  margin-left: calc(50% - 225px);
+  border-radius: 10px;
   cursor: pointer;
-  outline: none;
-  opacity: 0.9;
-  background-color: ${(props) =>
-    props.color === "Article" ? "#a7d9d1" : "#a7c8d9"};
-  transition: all 0.3s ease 0s;
-
-  &:hover {
-    transform: translateY(0.1rem);
-    opacity: 1;
-  }
-
-  &:active {
-    transform: translateY(-0.4rem);
-  }
+  border: 1px solid ${theme.color.secondary};
 
   a {
     text-decoration: none;
     color: #fff;
   }
 
-  @media ${device.md} {
-    width: 450px;
-    margin-left: calc(50% - 220px);
+  @media ${lg} {
+    height: 106px;
+    width: 400px;
+    margin-left: calc(50% - 200px);
   }
 
-  @media ${device.sm} {
+  @media ${md} {
+    height: 120px;
+    width: 450px;
+    margin-left: calc(50% - 225px);
+  }
+
+  @media ${sm} {
+    height: 90px;
+    width: 338px;
+    margin-left: calc(50% - 169px);
+  }
+
+  @media ${mobileMd} {
     width: 280px;
-    height: 190px;
     margin-left: calc(50% - 140px);
   }
 `;
 
-export const PreviewType = styled.div`
-  position: absolute;
-  height: 60px;
-  width: 100%;
-  line-height: 60px;
-  font-size: 18px;
-  padding: 0 40px 0 40px;
-  color: #fff;
-  font-weight: 400;
+export const StyledPreviewItemInfo = styled.div`
+  display: flex;
+  height: 35px;
+  font-size: 12px;
+  align-items: center;
+  padding-left: 30px;
 
-  @media ${device.md} {
-    font-size: 14px;
+  @media ${lg} {
+    height: 30px;
+    font-size: 10px;
   }
 
-  @media ${device.sm} {
-    font-size: 12px;
-    padding-left: 25px;
+  @media ${sm} {
+    height: 22px;
+    font-size: 8px;
   }
 `;
 
-export const PreviewTitle = styled.div`
-  position: absolute;
-  height: 60px;
-  width: 100%;
-  margin-top: 60px;
-  line-height: 60px;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 0 40px 0 40px;
-
-  @media ${device.md} {
-    font-size: 18px;
-    line-height: 40px;
-    padding-right: 40px;
-    margin-top: 50px;
-  }
-
-  @media ${device.sm} {
-    font-size: 14px;
-    line-height: 25px;
-    padding-left: 25px;
-  }
+export const StyledPreviewItemTagContainer = styled(StyledPreviewItemInfo)`
+  padding-left: 28px;
 `;
 
-export const PreviewDate = styled.div`
-  position: absolute;
-  height: 60px;
-  width: 100%;
-  margin-top: 120px;
-  line-height: 60px;
-  padding-left: 40px;
-  color: #000;
-  font-weight: 400;
-  font-size: 16px;
+export const StyledPreviewItemTag = styled.div`
+  border: 1px solid ${theme.color.secondary};
+  border-radius: 10px;
+  padding: 3px 10px 3px 10px;
+  font-size: 10px;
 
-  @media ${device.md} {
-    font-size: 14px;
+  @media ${lg} {
+    font-size: 8px;
   }
 
-  @media ${device.sm} {
-    font-size: 12px;
-    margin-top: 125px;
-    padding-left: 25px;
+  @media ${sm} {
+    padding: 1px 8px 1px 8px;
   }
 `;

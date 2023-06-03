@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { device } from "../utils/device";
-import { footerCopyRightData } from "../data";
+import { device } from "../../utils/device";
+import { footerCopyRightData } from "../../data";
 
 const FooterContainer = styled.footer`
   position: absolute;
@@ -9,6 +9,7 @@ const FooterContainer = styled.footer`
   top: 100%;
   width: 100%;
   height: 100px;
+  margin-top: 100px;
 
   @media ${device.md} {
     display: grid;
@@ -16,12 +17,12 @@ const FooterContainer = styled.footer`
 `;
 
 const CopyRight = styled.p`
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
 
   a {
     text-decoration: none;
-    color: #000;
+    color: #fff;
   }
 
   @media ${device.md} {
@@ -34,7 +35,7 @@ const CopyRight = styled.p`
   }
 `;
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <FooterContainer>
       <CopyRight>
@@ -43,5 +44,3 @@ const Footer = () => {
     </FooterContainer>
   );
 };
-
-export default Footer;

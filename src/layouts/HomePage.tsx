@@ -1,19 +1,16 @@
 import React from "react";
 import { NavBar } from "@/components";
-import { Preview } from "@/components";
-import Footer from "../components/Footer";
-import { Container, HeadingContainer, Heading, SubHeading } from "./styles";
+import { About } from "@/components";
+import { Footer } from "@/components";
+import { StyledContainer } from "./styles";
 
 export const HomePage = () => {
   return (
-    <Container>
+    <StyledContainer>
       <NavBar />
-      <HeadingContainer>
-        <Heading>Will Jones</Heading>
-        <SubHeading>Software Engineer</SubHeading>
-      </HeadingContainer>
-      <Preview />
+      <About />
+
       <Footer />
-    </Container>
+    </StyledContainer>
   );
 };
