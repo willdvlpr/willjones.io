@@ -24,15 +24,14 @@ export const StyledSection = styled.div`
 
   @media ${md} {
     width: 100%;
+    overflow: visible;
+    height: auto;
+    padding-top: 60px;
   }
 `;
 
 export const StyledHeadingContainer = styled.div`
   text-align: center;
-
-  @media ${sm} {
-    margin-top: 30px;
-  }
 `;
 
 export const StyledHeading = styled.h1`
