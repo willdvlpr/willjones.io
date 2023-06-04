@@ -1,24 +1,35 @@
 import React from "react";
-import { postData } from "../../data/posts";
+import { PreviewItem } from "@/utils/types";
 import {
   StyledPreviewItem,
+  StyledPreviewLink,
   StyledPreviewItemInfo,
   StyledPreviewItemTagContainer,
   StyledPreviewItemTag,
 } from "./styles";
 
-export const Preview = () => {
+interface PreviewProps {
+  previewItems: PreviewItem[];
+}
+
+export const Preview = ({ previewItems }: PreviewProps) => {
   return (
     <>
-      {postData.map(({ id, link, title, type, tags }) => (
+      {previewItems.map(({ id, link, title, type, tags }) => (
         <StyledPreviewItem key={id} color={type}>
-          <a href={link} target="_blank" rel="noreferrer">
+          <StyledPreviewLink href={link} target="_blank" rel="noreferrer">
             <StyledPreviewItemInfo>{type}</StyledPreviewItemInfo>
             <StyledPreviewItemInfo>{title}</StyledPreviewItemInfo>
             <StyledPreviewItemTagContainer>
-              <StyledPreviewItemTag>{tags}</StyledPreviewItemTag>
+              {tags.map((tag) => {
+                return (
+                  <StyledPreviewItemTag key={`${id}-${tag}`}>
+                    {tag}
+                  </StyledPreviewItemTag>
+                );
+              })}
             </StyledPreviewItemTagContainer>
-          </a>
+          </StyledPreviewLink>
         </StyledPreviewItem>
       ))}
     </>

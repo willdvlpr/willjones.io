@@ -3,7 +3,7 @@ import { device } from "../../utils/device";
 
 const { md, sm, mobileLg } = device;
 
-export const Nav = styled.nav`
+export const StyledNav = styled.nav`
   display: flex;
   height: 100px;
   z-index: 10000;
@@ -16,26 +16,13 @@ export const Nav = styled.nav`
   }
 `;
 
-export const NavItem = styled.div`
-  position: relative;
+export const StyledNavItem = styled.h3`
   margin-left: 50px;
+  z-index: 1;
+  font-size: 16px;
 
   @media ${md} {
     margin-left: 0;
-  }
-`;
-
-export const Title = styled.h3`
-  position: relative;
-  font-size: 16px;
-  z-index: 1;
-
-  a {
-    text-decoration: none;
-    color: ${(props) => props.color};
-  }
-
-  @media ${md} {
     font-size: 14px;
   }
 
@@ -46,4 +33,9 @@ export const Title = styled.h3`
   @media ${mobileLg} {
     font-size: 10px;
   }
+`;
+
+export const StyledNavItemLink = styled.a`
+  text-decoration: none;
+  color: ${(props) => props.color};
 `;

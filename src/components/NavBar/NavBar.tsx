@@ -1,22 +1,29 @@
 import React from "react";
-import { socialData } from "@/data";
+import { NavItem } from "@/utils/types";
 import { getNavItemColor } from "@/utils/helpers";
-import { Nav, NavItem, Title } from "./styles";
+import { StyledNav, StyledNavItem, StyledNavItemLink } from "./styles";
 
-export const NavBar = () => {
+interface NavBarProps {
+  navItems: NavItem[];
+}
+
+export const NavBar = ({ navItems }: NavBarProps) => {
   return (
-    <Nav>
-      {socialData.map(({ id, displayName, link }, index) => {
+    <StyledNav>
+      {navItems.map(({ id, displayName, link }, index) => {
         return (
-          <NavItem key={id}>
-            <Title color={getNavItemColor(index)}>
-              <a href={link} target="_blank" rel="external">
-                {displayName}
-              </a>
-            </Title>
-          </NavItem>
+          <StyledNavItem key={id}>
+            <StyledNavItemLink
+              color={getNavItemColor(index)}
+              href={link}
+              target="_blank"
+              rel="external"
+            >
+              {displayName}
+            </StyledNavItemLink>
+          </StyledNavItem>
         );
       })}
-    </Nav>
+    </StyledNav>
   );
 };

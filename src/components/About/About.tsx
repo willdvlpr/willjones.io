@@ -1,5 +1,5 @@
 import React from "react";
-import { HOME_PAGE } from "@/utils/constants";
+import { postData } from "@/data";
 import { Preview } from "@/components";
 import {
   StyledSectionContainer,
@@ -9,28 +9,35 @@ import {
   StyledSubHeading,
   StyledSpan,
   StyledAbout,
+  StyledPreviewContainer,
 } from "./styles";
 
-const { HEADING, ABOUT_TEXT } = HOME_PAGE;
+interface AboutProps {
+  heading: string;
+  subHeading: string;
+  description: string[];
+}
 
-export const About = () => {
+export const About = ({ heading, subHeading, description }: AboutProps) => {
   return (
     <StyledSectionContainer>
       <StyledSection>
         <StyledHeadingContainer>
-          <StyledHeading>{HEADING}</StyledHeading>
+          <StyledHeading>{heading}</StyledHeading>
           <StyledSubHeading>
-            Software <StyledSpan>Engineer</StyledSpan>.
+            <StyledSpan>{subHeading}</StyledSpan>.
           </StyledSubHeading>
           <StyledAbout>
-            {ABOUT_TEXT.map((text) => {
+            {description.map((text) => {
               return <p key={text}>{text}</p>;
             })}
           </StyledAbout>
         </StyledHeadingContainer>
       </StyledSection>
       <StyledSection>
-        <Preview />
+        <StyledPreviewContainer>
+          <Preview previewItems={postData} />
+        </StyledPreviewContainer>
       </StyledSection>
     </StyledSectionContainer>
   );

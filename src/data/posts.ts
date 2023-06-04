@@ -1,25 +1,17 @@
-type PostData = {
-  id: number;
-  link: string;
-  title: string;
-  type: string;
-  tags: string[];
-};
+import { PreviewItem } from "@/utils/types";
 
-type Posts = PostData[];
-
-export const postData: Posts = [
+export const postData: PreviewItem[] = [
   {
     id: 1,
     link: "https://github.com/willdvlpr/react-webpack-starter",
     title: "react-webpack-starter | supports TS and SASS",
     type: "Open-Source Code",
-    tags: ["React"],
+    tags: ["React", "Webpack", "Babel"],
   },
   {
     id: 2,
     link: "https://willdvlpr.medium.com/create-a-scrolling-ticker-using-the-hacker-news-rss-feed-in-react-42633320a2b0",
-    title: "Create a Scrolling Ticker | Hacker News RSS Feed in React",
+    title: "Create a Scrolling Ticker with RSS Feed in React",
     type: "Article",
     tags: ["React"],
   },
@@ -28,14 +20,14 @@ export const postData: Posts = [
     link: "https://willdvlpr.medium.com/creating-a-ci-pipeline-with-gitlab-b4bd0b68e80c",
     title: "Creating a CI Pipeline with GitLab",
     type: "Article",
-    tags: ["Docker"],
+    tags: ["Docker", "GitLab", "GCP"],
   },
   {
     id: 4,
     link: "https://willdvlpr.medium.com/containerizing-a-react-node-js-app-using-docker-and-nginx-60b63796d67b",
-    title: "Containerizing a React + Node.js App using Docker (and NGINX)",
+    title: "Containerizing a React + Node.js App with Docker",
     type: "Article",
-    tags: ["NGINX"],
+    tags: ["Docker", "NGINX"],
   },
   // {
   //   id: 5,

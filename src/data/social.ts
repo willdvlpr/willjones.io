@@ -1,8 +1,6 @@
-export const socialData: {
-  id: number;
-  displayName: string;
-  link: string;
-}[] = [
+import { NavItem } from "@/utils/types";
+
+export const socialData: NavItem[] = [
   {
     id: 1,
     displayName: "GitHub",
@@ -29,11 +27,3 @@ export const socialData: {
     link: "https://www.youtube.com/channel/UCSFp5DQrZemnjP5p8XYg7JA",
   },
 ];
-
-export const footerCopyRightData: {
-  link?: string;
-  text: string;
-} = {
-  link: "https://www.willjones.io",
-  text: `Copyright © ${new Date().getFullYear()} Will Jones. All rights reserved.`,
-};
