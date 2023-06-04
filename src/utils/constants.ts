@@ -8,3 +8,8 @@ export const HOME_PAGE = {
     "Outside of the world of software engineering, I learn about physics, mathematics, economics, finance, psychology, neuroscience, and play chess.",
   ],
 };
+
+export const PAGE_PATHS = {
+  HOME: "/",
+  ABOUT: "/about",
+};

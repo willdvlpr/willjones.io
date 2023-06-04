@@ -1,2 +1,2 @@
-export { socialData, footerCopyRightData } from "./social";
+export { socialData } from "./social";
 export { postData } from "./posts";
