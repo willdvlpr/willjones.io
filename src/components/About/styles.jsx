@@ -33,6 +33,10 @@ export const StyledSection = styled.div`
     overflow: visible;
     height: auto;
     padding-top: 60px;
+
+    &:last-child {
+      border: none;
+    }
   }
 `;
 
