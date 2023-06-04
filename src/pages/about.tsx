@@ -5,7 +5,7 @@ import {
   StyledAboutContainer,
   StyledReturnContainer,
   StyledAboutHeading,
-} from "./styles";
+} from "@/styles/pageStyles";
 
 const { ABOUT_TEXT } = HOME_PAGE;
 

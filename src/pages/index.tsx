@@ -10,7 +10,7 @@ import {
   StyledHomeContainer,
   StyledHomeSection,
   StyledPreviewContainer,
-} from "./styles";
+} from "@/styles/pageStyles";
 
 const { HEADING, SUB_HEADING } = HOME_PAGE;
 
