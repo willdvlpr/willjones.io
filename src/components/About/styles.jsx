@@ -20,23 +20,12 @@ export const StyledSection = styled.div`
   height: 850px;
   width: 50%;
   padding-top: 100px;
-  overflow: scroll;
-
-  &:last-child {
-    border-bottom: 1px solid #333;
-    border-top: 1px solid #333;
-    border-radius: 50px;
-  }
 
   @media ${md} {
     width: 100%;
     overflow: visible;
     height: auto;
     padding-top: 60px;
-
-    &:last-child {
-      border: none;
-    }
   }
 `;
 
