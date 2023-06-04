@@ -2,12 +2,12 @@ import React from "react";
 import { Analytics } from "@vercel/analytics/react";
 import "../styles/global.css";
 
-interface AppProps {
+interface Props {
   Component: any;
   pageProps: any;
 }
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }: Props) => {
   return (
     <>
       <Component {...pageProps} />
