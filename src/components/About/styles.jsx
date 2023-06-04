@@ -22,6 +22,12 @@ export const StyledSection = styled.div`
   padding-top: 100px;
   overflow: scroll;
 
+  &:last-child {
+    border-bottom: 1px solid #333;
+    border-top: 1px solid #333;
+    border-radius: 50px;
+  }
+
   @media ${md} {
     width: 100%;
     overflow: visible;
@@ -90,7 +96,7 @@ export const StyledAbout = styled.div`
 export const StyledPreviewContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 50px;
   padding-left: 50px;
   padding-right: 50px;
 
