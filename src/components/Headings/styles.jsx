@@ -2,22 +2,11 @@ import styled from "styled-components";
 import { theme } from "@/utils/theme";
 import { device } from "@/utils/device";
 
-const { lg, md, sm } = device;
+const { sm } = device;
 
 const {
   color: { primaryText, secondary },
 } = theme;
-
-export const StyledSectionContainer = styled.div`
-  display: grid;
-`;
-
-export const StyledSection = styled.div`
-  height: auto;
-  width: 100%;
-  margin-top: 100px;
-  padding-top: 60px;
-`;
 
 export const StyledHeadingContainer = styled.div`
   text-align: center;
@@ -52,32 +41,4 @@ export const StyledSubHeading = styled(StyledHeading)`
 
 export const StyledSpan = styled.span`
   color: ${secondary};
-`;
-
-export const StyledAbout = styled.div`
-  margin-top: 60px;
-  padding: 0 50px 0 50px;
-  font-size: 14px;
-
-  color: ${primaryText};
-  line-height: 35px;
-`;
-
-export const StyledPreviewContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  margin-top: 100px;
-  padding-left: 200px;
-  padding-right: 200px;
-
-  @media ${md} {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-
-  @media ${sm} {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
 `;
