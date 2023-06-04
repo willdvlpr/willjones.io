@@ -29,24 +29,20 @@ export const postData: PreviewItem[] = [
     type: "Article",
     tags: ["Docker", "NGINX"],
   },
-  // {
-  //   id: 5,
-  //   link: "https://willdvlpr.medium.com/how-to-use-ibms-carbon-design-system-react-to-create-a-quick-ui-f10b8290f29",
-  //   previewMeta: {
-  //     previewType: "Article",
-  //     previewDate: "June 10 2021",
-  //   },
-  //   previewTitle: "How to Use IBM’s Carbon Design System to Create a Quick UI",
-  // },
-  // {
-  //   id: 6,
-  //   link: "https://willdvlpr.medium.com/using-a-makefile-with-your-web-app-2e9e68bf4b53",
-  //   previewMeta: {
-  //     previewType: "Article",
-  //     previewDate: "June 3 2021",
-  //   },
-  //   previewTitle: "Using a Makefile with Your Web App",
-  // },
+  {
+    id: 5,
+    link: "https://willdvlpr.medium.com/how-to-use-ibms-carbon-design-system-react-to-create-a-quick-ui-f10b8290f29",
+    title: "How to Use IBM’s Carbon Design System to Create a Quick UI",
+    type: "Article",
+    tags: ["React", "Scss"],
+  },
+  {
+    id: 6,
+    link: "https://willdvlpr.medium.com/using-a-makefile-with-your-web-app-2e9e68bf4b53",
+    title: "Using a Makefile with Your Web App",
+    type: "Article",
+    tags: ["Bash"],
+  },
   // {
   //   id: 7,
   //   link: "https://willdvlpr.medium.com/the-socioprophet-platform-266cea73b024",

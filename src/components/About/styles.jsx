@@ -17,9 +17,10 @@ export const StyledSectionContainer = styled.div`
 `;
 
 export const StyledSection = styled.div`
-  height: auto;
+  height: 850px;
   width: 50%;
   padding-top: 100px;
+  overflow: scroll;
 
   @media ${md} {
     width: 100%;
