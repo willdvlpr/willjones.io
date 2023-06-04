@@ -1,5 +1,6 @@
 import React from "react";
 import { postData } from "@/data";
+import { Button } from "@/components";
 import { Preview } from "@/components";
 import {
   StyledSectionContainer,
@@ -8,17 +9,15 @@ import {
   StyledHeading,
   StyledSubHeading,
   StyledSpan,
-  StyledAbout,
   StyledPreviewContainer,
 } from "./styles";
 
 interface AboutProps {
   heading: string;
   subHeading: string;
-  description: string[];
 }
 
-export const About = ({ heading, subHeading, description }: AboutProps) => {
+export const About = ({ heading, subHeading }: AboutProps) => {
   return (
     <StyledSectionContainer>
       <StyledSection>
@@ -27,14 +26,8 @@ export const About = ({ heading, subHeading, description }: AboutProps) => {
           <StyledSubHeading>
             <StyledSpan>{subHeading}</StyledSpan>.
           </StyledSubHeading>
-          <StyledAbout>
-            {description.map((text) => {
-              return <p key={text}>{text}</p>;
-            })}
-          </StyledAbout>
+          <Button link="/about" label="About Me" />
         </StyledHeadingContainer>
-      </StyledSection>
-      <StyledSection>
         <StyledPreviewContainer>
           <Preview previewItems={postData} />
         </StyledPreviewContainer>
