@@ -9,43 +9,30 @@ const {
 } = theme;
 
 export const StyledSectionContainer = styled.div`
-  display: flex;
-
-  @media ${md} {
-    display: grid;
-  }
+  display: grid;
 `;
 
 export const StyledSection = styled.div`
-  height: 850px;
-  width: 50%;
-  padding-top: 100px;
-
-  @media ${md} {
-    width: 100%;
-    overflow: visible;
-    height: auto;
-    padding-top: 60px;
-  }
+  height: auto;
+  width: 100%;
+  margin-top: 100px;
+  padding-top: 60px;
 `;
 
 export const StyledHeadingContainer = styled.div`
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const StyledHeading = styled.h1`
   margin: 0;
   padding: 0;
-  padding-left: 40px;
   font-size: 30px;
   font-weight: normal;
   letter-spacing: 5px;
   color: ${primaryText};
-
-  @media ${lg} {
-    font-size: 26px;
-    padding: 0;
-  }
 
   @media ${sm} {
     font-size: 24px;
@@ -55,10 +42,7 @@ export const StyledHeading = styled.h1`
 export const StyledSubHeading = styled(StyledHeading)`
   margin-top: 60px;
   font-size: 38px;
-
-  @media ${lg} {
-    font-size: 32px;
-  }
+  padding-bottom: 60px;
 
   @media ${sm} {
     font-size: 24px;
@@ -71,27 +55,21 @@ export const StyledSpan = styled.span`
 `;
 
 export const StyledAbout = styled.div`
-  text-align: left;
   margin-top: 60px;
-  padding-left: 50px;
+  padding: 0 50px 0 50px;
   font-size: 14px;
 
   color: ${primaryText};
   line-height: 35px;
-
-  @media ${lg} {
-    text-align: center;
-    padding-right: 50px;
-    font-size: 12px;
-  }
 `;
 
 export const StyledPreviewContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
+  margin-top: 100px;
+  padding-left: 200px;
+  padding-right: 200px;
 
   @media ${md} {
     padding-left: 100px;

@@ -1,13 +1,18 @@
 import styled from "styled-components";
+import { theme } from "@/utils/theme";
 import { device } from "../../utils/device";
 
 const { md, sm, mobileLg } = device;
 
 export const StyledNav = styled.nav`
+  position: fixed;
   display: flex;
   height: 100px;
+  width: 100%;
   z-index: 10000;
   align-items: center;
+  background-color: ${theme.color.primary};
+  border-bottom: 1px solid ${theme.color.horizontalBreakLine};
 
   @media ${md} {
     justify-content: space-between;
