@@ -1,3 +1,3 @@
 # willjones.io
 
-Codebase for Personal Site hosted at https://www.willjones.io
+Old codebase for Personal Site (https://www.willjones.io)
